@@ -3,153 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tomibu – Werbung anders erleben</title>
-<meta name="description" content="Tomibu ist eine Plattform, auf der Werbung freiwillig angesehen und bewusst wahrgenommen wird. Tomibu befindet sich im Aufbau.">
-<meta name="theme-color" content="#04150f">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304150f'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='800' fill='%237ce0a3' text-anchor='middle'%3ETB%3C/text%3E%3C/svg%3E">
+<title>Tomibu</title>
+<meta name="description" content="Tomibu – bald mehr.">
+<meta name="theme-color" content="#00261a">
+<meta property="og:title" content="Tomibu">
+<meta property="og:image" content="https://tomibu.at/tomibu.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2300261a'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23e6e8e7' text-anchor='middle'%3ETB%3C/text%3E%3C/svg%3E">
 <style>
-  :root{
-    --bg:#04150f; --bg2:#082419; --card:#0d2f21; --line:#1d4a36;
-    --mint:#7ce0a3; --green:#2b7338; --text:#eef4f0; --muted:#a9bfb3;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    background:radial-gradient(1200px 700px at 80% -10%,#0f3a27 0%,transparent 60%),var(--bg);
-    color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;
-  }
-  a{color:var(--mint)}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-  header{border-bottom:1px solid var(--line)}
-  header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.04em;font-size:20px;color:var(--text);text-decoration:none}
-  .brand::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--mint)}
-  nav a{color:var(--muted);text-decoration:none;font-size:15px;margin-left:22px}
-  nav a:hover{color:var(--text)}
-  .pill{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-        color:var(--mint);background:rgba(43,115,56,.25);border:1px solid var(--line);border-radius:999px;padding:6px 14px}
-  .hero{padding-top:88px;padding-bottom:72px}
-  h1{font-size:clamp(44px,8vw,84px);line-height:1.02;font-weight:900;letter-spacing:-.01em;margin:22px 0 24px;text-transform:uppercase}
-  h1 span{color:var(--mint)}
-  .lead{font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:640px}
-  .status{margin-top:28px;font-size:14px;color:var(--muted)}
-  section{padding:56px 0}
-  h2{font-size:clamp(28px,4vw,40px);font-weight:900;line-height:1.1;text-transform:uppercase;margin:16px 0 28px}
-  h2 span{color:var(--mint)}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-  .card{background:linear-gradient(180deg,var(--card),#0a2619);border:1px solid var(--line);border-radius:20px;padding:28px}
-  .card h3{font-size:19px;margin-bottom:8px}
-  .card p{color:var(--muted);font-size:16px}
-  .num{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:12px;
-       background:rgba(124,224,163,.12);color:var(--mint);font-weight:800;margin-bottom:16px}
-  .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
-  .two .card ul{list-style:none;margin-top:14px}
-  .two .card li{padding:10px 0 10px 28px;border-top:1px solid var(--line);position:relative;color:var(--text)}
-  .two .card li::before{content:"";position:absolute;left:4px;top:19px;width:10px;height:10px;border-radius:50%;background:var(--mint)}
-  .goal{text-align:center;padding-top:72px;padding-bottom:72px}
-  .goal p{max-width:720px;margin:0 auto;font-size:clamp(19px,2.4vw,24px);color:var(--text)}
-  .goal p span{color:var(--mint)}
-  .contact{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
-  .btn{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px}
-  .btn-primary{background:var(--mint);color:#04150f}
-  .btn-ghost{border:1px solid var(--mint);color:var(--mint)}
-  footer{border-top:1px solid var(--line);padding:40px 0 56px;color:var(--muted);font-size:14px}
-  footer h4{color:var(--text);font-size:15px;margin-bottom:8px}
-  footer .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
-  @media (max-width:560px){nav{display:none}.hero{padding-top:56px;padding-bottom:48px}section{padding:40px 0}}
+  html,body{margin:0;height:100%;background:#00261a;overflow:hidden}
+  body{background:radial-gradient(ellipse at 50% 45%,#063d27 0%,#012a1b 45%,#00160f 100%)}
+  .logo{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+  .logo picture{display:contents}
+  .logo img{max-width:100%;max-height:100%;object-fit:contain;
+    -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%),linear-gradient(to right,transparent 0,#000 12%,#000 88%,transparent 100%);-webkit-mask-composite:source-in;
+            mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%),linear-gradient(to right,transparent 0,#000 12%,#000 88%,transparent 100%);mask-composite:intersect}
 </style>
 </head>
 <body>
-
-<header>
-  <div class="wrap">
-    <a class="brand" href="#">TOMIBU</a>
-    <nav>
-      <a href="#nutzer">Für Nutzer</a>
-      <a href="#firmen">Für Firmen</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <div class="wrap hero">
-    <span class="pill">Im Aufbau</span>
-    <h1>Werbung.<br><span>Anders</span><br>erleben.</h1>
-    <p class="lead">Tomibu ist eine Plattform, auf der Werbung nicht aufgedrängt wird. Menschen entscheiden selbst, welche Werbung sie ansehen – und setzen sich bewusst damit auseinander.</p>
-    <p class="status">Tomibu befindet sich im Aufbau. Details können sich bis zum Start ändern.</p>
-  </div>
-
-  <section>
-    <div class="wrap">
-      <span class="pill">Das Prinzip</span>
-      <h2>Drei Schritte.<br><span>Ein neuer Blick.</span></h2>
-      <div class="grid">
-        <div class="card"><div class="num">01</div><h3>Werbung entdecken</h3><p>Du wählst selbst aus, welche Werbung du ansehen möchtest.</p></div>
-        <div class="card"><div class="num">02</div><h3>Aufmerksam ansehen</h3><p>Freiwillig und in Ruhe – ohne dass dich Werbung unterbricht.</p></div>
-        <div class="card"><div class="num">03</div><h3>Frage beantworten</h3><p>Eine kurze Frage zum Inhalt zeigt, dass die Botschaft angekommen ist.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap two">
-      <div class="card" id="nutzer">
-        <span class="pill">Für Nutzer</span>
-        <h2 style="margin-bottom:8px">Du <span>entscheidest.</span></h2>
-        <p>Bei Tomibu ist Werbung keine Störung, sondern deine Wahl.</p>
-        <ul>
-          <li>Du suchst dir die Werbung selbst aus</li>
-          <li>Kurze Fragen statt endloser Werbepausen</li>
-          <li>Für deine Teilnahme erhältst du TomibuPoints (TP)</li>
-          <li>Teilnahme ab 18 Jahren</li>
-        </ul>
-      </div>
-      <div class="card" id="firmen">
-        <span class="pill">Für Firmen</span>
-        <h2 style="margin-bottom:8px">Mehr als nur <span>ein Kontakt.</span></h2>
-        <p>Tomibu soll sichtbar machen, ob Werbung wirklich wahrgenommen wird.</p>
-        <ul>
-          <li>Werbung wird freiwillig angesehen</li>
-          <li>Eine Frage zum Inhalt zeigt, ob die Botschaft ankommt</li>
-          <li>Bewusste Aufmerksamkeit statt flüchtiger Einblendung</li>
-          <li>Interesse? Schreiben Sie uns.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <div class="wrap goal">
-    <span class="pill">Unser Ziel</span>
-    <h2>Fair für <span>beide Seiten.</span></h2>
-    <p>Menschen entscheiden selbst, welche Werbung sie sehen. Firmen erreichen Menschen, die <span>wirklich hinschauen</span>.</p>
-  </div>
-
-  <section id="kontakt">
-    <div class="wrap">
-      <span class="pill">Kontakt</span>
-      <h2>Bleib <span>dabei.</span></h2>
-      <div class="contact">
-        <a class="btn btn-primary" href="mailto:info@tomibu.at">info@tomibu.at</a>
-        <a class="btn btn-ghost" href="https://www.instagram.com/tomibu.at/" target="_blank" rel="noopener">Instagram @tomibu.at</a>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap row">
-    <div id="impressum">
-      <h4>Impressum</h4>
-      <p>Tomibu<br>E-Mail: <a href="mailto:info@tomibu.at">info@tomibu.at</a></p>
-    </div>
-    <div>
-      <h4>Hinweis</h4>
-      <p>Diese Seite verwendet keine Cookies und kein Tracking. Tomibu befindet sich im Aufbau.</p>
-    </div>
-  </div>
-</footer>
-
+  <div class="logo"><picture><source media="(orientation: portrait)" srcset="tomibu-hoch.jpg"><img src="tomibu.jpg" alt="Tomibu"></picture></div>
 </body>
 </html>
